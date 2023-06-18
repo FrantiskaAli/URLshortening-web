@@ -41,7 +41,7 @@ export default function Stats() {
                 </section>
         
             </article>
-            <hr className="border-t-8 border-teal-300  -mt-48 pb-48"></hr>
+            <hr className="border-t-8 border-teal-300  -mt-48 pb-80"></hr>
         </section>
     )
 }
