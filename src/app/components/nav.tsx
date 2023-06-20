@@ -10,7 +10,7 @@ export default function Navigation() {
             </article>
             <article className="flex w-1/6 justify-between">
                 <button className="text-gray-400 font-bold hover:text-black cursor-pointer">Login</button>
-                <button className="bg-teal-400 font-bold text-white px-6 py-2 rounded-3xl hover:opacity-50">Sign up</button>
+                <button className="bg-teal-400 font-bold text-white px-6 py-2 rounded-3xl hover:bg-teal-200">Sign up</button>
             </article>
 
         </nav>
