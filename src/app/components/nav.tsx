@@ -1,25 +1,14 @@
 'use client'
-import { useState, useEffect } from 'react';
+import { useState, } from 'react';
+
+type Viewport = {
+    windowWidth :number
+}
 
 
+export default function Navigation({windowWidth}:Viewport) {
 
-
-export default function Navigation() {
-
-    const [windowWidth, setWindowSize] = useState(1000);
-    
-      useEffect(() => {
-        if (window !== undefined)
-       { const handleWindowResize = () => {
-        setWindowSize( window.innerWidth) 
-        };
-    
-         window.addEventListener('resize', handleWindowResize) 
-    
-        return () => {
-          window.removeEventListener('resize', handleWindowResize);
-        };}
-      }, []);
+  
 
 
 const [openNav, setOpenNav] = useState(false)

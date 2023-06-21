@@ -1,3 +1,5 @@
+'use client'
+import {useState, useEffect} from 'react'
 import Navigation from "./components/nav";
 import Jumbo from "./components/jumbo";
 import Search from "./components/search";
@@ -7,13 +9,32 @@ import Footer from "./components/footer";
 
 
 export default function Home() {
+
+ const [windowWidth, setWindowSize] =  typeof window !== "undefined"? useState(window.innerWidth) : useState(1000);
+    
+      useEffect(() => {
+       
+        const handleWindowResize = () => {
+        setWindowSize( window.innerWidth) 
+        };
+    
+         window.addEventListener('resize', handleWindowResize) 
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, []);
+
+
+
+
   return (
     <main className="flex flex-col w-screen bg-gray-100">
-      <Navigation/>
-      <Jumbo/>
-      <Search/>
+      <Navigation windowWidth={windowWidth}/>
+      <Jumbo />
+      <Search windowWidth={windowWidth} />
       <Stats />
-      <Prompt />
+      <Prompt windowWidth={windowWidth} />
       <Footer/>
     </main>
 
