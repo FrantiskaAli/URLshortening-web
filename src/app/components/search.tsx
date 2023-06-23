@@ -40,13 +40,13 @@ export default function Search({windowWidth}: Viewport) {
 
 
   return (
-    <section className='self-center w-11/12 md:w-4/5 h-56 md:-mt-28 -mt-16'>
+    <section className='self-center w-11/12 md:w-4/5 h-fit md:-mt-28 -mt-16 mb-20 Poppins'  >
       <article style={{ backgroundImage: `url(${bgPic}')`, backgroundRepeat: "no-repeat", backgroundSize: "cover" } } className=' md:h-auto bg-purple-950 self-center flex flex-col items-center py-8 px-4 md:flex-row md:justify-between rounded-xl md:mt-10 md:px-20'>
         <section className='flex flex-col mb-6 md:mb-0 md:w-4/5 w-full'>
-          <input name="link" className={empty ? "rounded-md md:rounded-lg py-2 px-4 mt-4 w-full focus:outline-none ring-2 ring-red-500" : "w-full rounded-md md:rounded-lg  p-4 focus:outline-none focus:border-none focus:ring-2 focus:ring-purple-700"} onClick={() => handleInput()} value={inputValue} onChange={handleChange} type="text" placeholder='Shorten a link here...' />
-          {empty ? <label htmlFor="link" className="text-red-500 font-bold text-sm ">Please add a link</label> :<label></label>}
+          <input name="link" className={empty ? "rounded-md md:rounded-lg py-2 px-4 mt-4 w-full  focus:outline-none ring-2 ring-red-500" : "w-full rounded-md md:rounded-lg  p-4 focus:outline-none focus:border-none focus:ring-2 focus:ring-purple-700"} onClick={() => handleInput()} value={inputValue} onChange={handleChange} type="text" placeholder='Shorten a link here...' />
+          {empty ? <label htmlFor="link" className="text-red-500 font-bold text-sm Poppins ">Please add a link</label> :<label></label>}
         </section>
-        <button onClick={() => handleClick()} className="bg-teal-400 font-bold text-white h-12 px-12 self-center rounded-lg hover:bg-teal-200 w-full md:w-fit">Shorten It!</button>
+        <button onClick={() => handleClick()} className="bg-teal-400 Poppins font-bold text-white h-12 px-12 self-center rounded-lg hover:bg-teal-200 w-full md:w-fit">Shorten It!</button>
       </article>
       <Saved searched={searched} />
     </section>

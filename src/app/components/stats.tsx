@@ -1,10 +1,10 @@
 export default function Stats() {
     return (
-        < section className="self-center md:w-4/5 flex flex-col md:pt-12 relative pb-20 mt-8" >
+        < section className="self-center md:w-4/5 flex flex-col relative md:pt-12 pb-20 Poppins" >
             <article className="md:w-2/5 w-4/5 text-center self-center md:pb-36 pb-20">
-                <h2 className="text-3xl font-bold">Advanced Statistics</h2>
+                <h2 className="text-3xl font-bold Poppins">Advanced Statistics</h2>
 
-                <p className="text-gray-400 font-medium">Track how your links are performing across the web with our
+                <p className="text-gray-400 font-medium Poppins">Track how your links are performing across the web with our
                     advanced statistics dashboard.</p>
             </article>
             
@@ -41,7 +41,7 @@ export default function Stats() {
                 </section>
         
             </article>
-            <hr className="md:border-t-8 md:border-l-0 border-l-8 border-t-0 h-3/5 absolute z-0 md:relative bottom-40 left-1/2 md:left-0 border-teal-300 md:w-3/4  "></hr>
+            <hr className="md:border-t-8 md:border-l-0 border-l-8 border-t-0 h-3/5 absolute z-0 md:relative bottom-40 left-1/2 md:left-0 border-teal-300 md:w-4/5  "></hr>
         </section>
     )
 }

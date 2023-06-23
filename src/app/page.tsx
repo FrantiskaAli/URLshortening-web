@@ -29,7 +29,7 @@ export default function Home() {
 
 
   return (
-    <main className="flex flex-col w-screen bg-gray-100">
+    <main className="flex flex-col justify-between w-screen bg-gray-100 Poppins">
       <Navigation windowWidth={windowWidth}/>
       <Jumbo />
       <Search windowWidth={windowWidth} />
