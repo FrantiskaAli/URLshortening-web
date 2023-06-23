@@ -16,6 +16,8 @@ export default function Search({windowWidth}: Viewport) {
   const [searched, setSearched] = useState<SearchedLinks>([]) //this will save searched values
   const [empty, setEmpty] = useState(false)
 
+  const bgPic = windowWidth > 1000 ? 'bg-shorten-desktop.svg' : 'bg-shorten-mobile.svg';
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   }
@@ -38,8 +40,8 @@ export default function Search({windowWidth}: Viewport) {
 
 
   return (
-    <section className='self-center w-11/12 md:w-4/5 md:-mt-32 -mt-16'>
-      <article style={windowWidth > 1000 ?{ backgroundImage: "url('bg-shorten-desktop.svg')", backgroundRepeat: "no-repeat", backgroundSize: "cover" } :{ backgroundImage: "url('bg-shorten-mobile.svg')", backgroundRepeat: "no-repeat", backgroundSize: "cover" } } className=' md:h-auto bg-purple-950 self-center flex flex-col items-center py-8 px-4 md:flex-row md:justify-between rounded-xl md:mt-10 md:px-20'>
+    <section className='self-center w-11/12 md:w-4/5 h-56 md:-mt-28 -mt-16'>
+      <article style={{ backgroundImage: `url(${bgPic}')`, backgroundRepeat: "no-repeat", backgroundSize: "cover" } } className=' md:h-auto bg-purple-950 self-center flex flex-col items-center py-8 px-4 md:flex-row md:justify-between rounded-xl md:mt-10 md:px-20'>
         <section className='flex flex-col mb-6 md:mb-0 md:w-4/5 w-full'>
           <input name="link" className={empty ? "rounded-md md:rounded-lg py-2 px-4 mt-4 w-full focus:outline-none ring-2 ring-red-500" : "w-full rounded-md md:rounded-lg  p-4 focus:outline-none focus:border-none focus:ring-2 focus:ring-purple-700"} onClick={() => handleInput()} value={inputValue} onChange={handleChange} type="text" placeholder='Shorten a link here...' />
           {empty ? <label htmlFor="link" className="text-red-500 font-bold text-sm ">Please add a link</label> :<label></label>}

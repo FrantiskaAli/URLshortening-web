@@ -1,5 +1,5 @@
 'use client'
-import {useState, useEffect} from 'react'
+import {useState, useEffect,useRef} from 'react'
 import Navigation from "./components/nav";
 import Jumbo from "./components/jumbo";
 import Search from "./components/search";
@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 
 export default function Home() {
 
- const [windowWidth, setWindowSize] =  typeof window !== "undefined"? useState(window.innerWidth) : useState(1000);
+ const [windowWidth, setWindowSize] =  useState(1000);
     
       useEffect(() => {
        

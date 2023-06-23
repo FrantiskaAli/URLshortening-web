@@ -1,7 +1,7 @@
 export default function Stats() {
     return (
         < section className="self-center md:w-4/5 flex flex-col md:pt-12 relative pb-20 mt-8" >
-            <article className="md:w-2/5 w-4/5 text-center self-center md:pb-40 pb-20">
+            <article className="md:w-2/5 w-4/5 text-center self-center md:pb-36 pb-20">
                 <h2 className="text-3xl font-bold">Advanced Statistics</h2>
 
                 <p className="text-gray-400 font-medium">Track how your links are performing across the web with our
@@ -41,7 +41,7 @@ export default function Stats() {
                 </section>
         
             </article>
-            <hr className="md:border-t-8 md:border-l-0 border-l-8 border-t-0 h-3/5 absolute z-0 md:relative bottom-20 left-40 border-teal-300 md:w-3/4 md:-mt-28 md:pb-40  "></hr>
+            <hr className="md:border-t-8 md:border-l-0 border-l-8 border-t-0 h-3/5 absolute z-0 md:relative bottom-40 left-1/2 md:left-0 border-teal-300 md:w-3/4  "></hr>
         </section>
     )
 }
