@@ -10,7 +10,7 @@ import Footer from "./components/footer";
 
 export default function Home() {
 
- const [windowWidth, setWindowSize] =  useState(1000);
+ const [windowWidth, setWindowSize] =  useState(999);
     
       useEffect(() => {
        
