@@ -13,7 +13,7 @@ export default function Home() {
  const [windowWidth, setWindowSize] =  useState(999);
     
       useEffect(() => {
-       
+        setWindowSize( window.innerWidth);
         const handleWindowResize = () => {
         setWindowSize( window.innerWidth) 
         };
